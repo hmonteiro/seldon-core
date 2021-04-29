@@ -1,0 +1,118 @@
+version: 2
+updates:
+- package-ecosystem: pip
+  directory: "/python"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  reviewers:
+  - adriangonz
+  ignore:
+  - dependency-name: flake8
+    versions:
+    - 3.8.4
+    - 3.9.0
+  - dependency-name: pandas
+    versions:
+    - 1.2.1
+    - 1.2.2
+    - 1.2.3
+  - dependency-name: pillow
+    versions:
+    - 8.1.0
+    - 8.1.2
+  - dependency-name: grpcio-tools
+    versions:
+    - 1.35.0
+    - 1.36.0
+    - 1.36.1
+  - dependency-name: pytest
+    versions:
+    - 6.2.1
+    - 6.2.2
+  - dependency-name: mypy-protobuf
+    versions:
+    - "1.23"
+    - "1.24"
+  - dependency-name: mypy
+    versions:
+    - "0.800"
+  - dependency-name: pip-licenses
+    versions:
+    - 3.3.0
+  - dependency-name: prometheus-client
+    versions:
+    - 0.9.0
+  - dependency-name: black
+    versions:
+    - 20.8b1
+- package-ecosystem: maven
+  directory: "/engine"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  reviewers:
+  - adriangonz
+  ignore:
+  - dependency-name: org.springframework.boot:spring-boot-starter-parent
+    versions:
+    - 2.4.2
+    - 2.4.3
+    - 2.4.4
+  - dependency-name: org.ojalgo:ojalgo
+    versions:
+    - 48.4.0
+    - 48.4.1
+  - dependency-name: org.checkerframework:checker-qual
+    versions:
+    - 3.10.0
+    - 3.11.0
+    - 3.9.1
+  - dependency-name: com.google.api.grpc:proto-google-common-protos
+    versions:
+    - 2.0.1
+- package-ecosystem: gomod
+  directory: "/executor"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  reviewers:
+  - adriangonz
+- package-ecosystem: gomod
+  directory: "/operator"
+  schedule:
+    interval: weekly
+  open-pull-requests-limit: 10
+  reviewers:
+  - adriangonz
+  ignore:
+  - dependency-name: sigs.k8s.io/controller-runtime
+    versions:
+    - 0.8.1
+    - 0.8.2
+  - dependency-name: github.com/onsi/gomega
+    versions:
+    - 1.10.4
+    - 1.10.5
+  - dependency-name: github.com/onsi/ginkgo
+    versions:
+    - 1.14.2
+    - 1.15.0
+  - dependency-name: k8s.io/apimachinery
+    versions:
+    - 0.20.2
+  - dependency-name: k8s.io/apiextensions-apiserver
+    versions:
+    - 0.20.2
+  - dependency-name: k8s.io/api
+    versions:
+    - 0.20.2
+  - dependency-name: k8s.io/client-go
+    versions:
+    - 0.20.2
+  - dependency-name: github.com/google/go-cmp
+    versions:
+    - 0.5.4
+  - dependency-name: github.com/go-logr/logr
+    versions:
+    - 0.3.0
