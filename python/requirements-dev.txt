@@ -7,7 +7,7 @@ pytest==6.1.0
 pytest-cov==2.10.1
 tox<4.0.0
 grpcio-tools==1.32.0
-mypy-protobuf==1.22
+mypy-protobuf==2.5
 
 # tenacity - used for smart retrying
 tenacity==6.2.0
